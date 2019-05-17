@@ -1,0 +1,23 @@
+#header_and_nav {
+    z-index: 2;
+    top: 0px;
+    background-color: rgba(255,255,255,0.5);
+    height: 7vh;
+}
+
+#page_container {
+    margin-top: 220px;
+}
+
+#floating_info_modal {
+    background: #F1F1F1;
+    z-index: 3;
+}
+
+#modal_photos {
+    overflow: scroll;
+}
+
+#modal_info {
+    overflow: scroll;
+}

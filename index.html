@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="bootstrap-4.3.1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="stylesheet.css" rel="stylesheet">
+    <script src="jquery-3.4.0.js"></script>
+    <script src="index.js"></script>
+    <title>Southwestern Missouri Plant Guide</title>
+</head>
+<body>
+    <div id="header_and_nav" class="w-100 position-fixed pb-3">
+        <nav class="w-100 text-center mt-3 mb-4">
+            <p id="home_link" class="btn btn-info d-inline" href="#">Home</p>
+            <p id="native_plants_link" class="btn btn-info d-inline" href="#">Native Plants</p>
+            <p id="non_native_plants_link" class="btn btn-info d-inline" href="#">Non-native Plants</p>
+            <p id="invasives_link" class="btn btn-info d-inline" href="#">Invasives</p>
+            <p id="all_plants_link" class="btn btn-info d-inline" href="#">All Plants</p>
+        </nav>
+        <div id="floating_info_container" class="w-100 h-75 d-none justify-content-center align-items-center">
+            <div id="floating_info_modal" class="w-75 h-100 d-none">
+                <div class="position-absolute w-75">
+                    <h1 id="close_modal_button" class="lead btn btn-secondary border-light float-right m-3">X</h1>
+                </div>
+                <div id="modal_info" class="w-50 float-left h-100 bg-light p-2">
+
+                </div>
+                <div id="modal_photos" class="w-50 float-right h-100 bg-secondary">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="w-100 text-center mt-5 pt-2">Southwestern Missouri Plant Guide</h1>
+    <h5 class="w-100 text-center mt-4">For all your plant identification needs</h5>
+
+    <div id="page_container" class="w-100 ml-auto mr-auto">
+        <div id="home_page" >
+            <div class="card p-5 mt-5">
+                <h3>About this blog</h3>
+                <p>This is an incomplete collection of plants that I've seen over the years (2015-2019) in southwestern Missouri around the Bois D' Arc area. It includes the name of the plant, photos of it at various stages in its life, information about each plant, and more.</p>
+            </div>
+            <div class="card p-5 mt-2">
+                <h3>Noticed Something?</h3>
+                <p>If you notice that I've mislabelled a plant and would like to contact me about it, I can be reached at this email address:</p>
+            </div>
+        </div>
+        <div id="native_plants_page">
+            <div class="card w-100 text-center mt-5">
+                <h3>Native Plants</h3>
+            </div>
+            <div id="plant_columns" class="row m-0">
+                <div id="native_plants_page_c1" class="col-3 p-0">
+
+                </div>
+                <div id="native_plants_page_c2" class="col-3 p-0">
+
+                </div>
+                <div id="native_plants_page_c3" class="col-3 p-0">
+
+                </div>
+                <div id="native_plants_page_c4" class="col-3 p-0">
+
+                </div>
+            </div>
+        </div>
+        <div id="non_native_plants_page">
+            <div class="card w-100 text-center mt-5">
+                <h3>Non-native Plants</h3>
+            </div>
+            <div id="plant_columns" class="row m-0">
+                <div id="non_native_plants_page_c1" class="col-4 p-0">
+
+                </div>
+
+                <div id="non_native_plants_page_c2" class="col-4 p-0">
+
+                </div>
+
+                <div id="non_native_plants_page_c3" class="col-4 p-0">
+
+                </div>
+            </div>
+        </div>
+        <div id="invasive_plants_page">
+            <div class="card w-100 text-center mt-5">
+                <h3>Invasives</h3>
+            </div>
+            <div id="plant_columns" class="row m-0">
+                <div id="invasive_plants_page_c1" class="col-4 p-0">
+
+                </div>
+
+                <div id="invasive_plants_page_c2" class="col-4 p-0">
+
+                </div>
+
+                <div id="invasive_plants_page_c3" class="col-4 p-0">
+
+                </div>
+            </div>
+        </div>
+        <div id="all_plants_page">
+            <div class="card w-100 text-center mt-5">
+                <h3>All Plants</h3>
+            </div>
+            <div id="plant_columns" class="row m-0">
+                <div id="all_plants_page_c1" class="col-4 p-0">
+
+                </div>
+
+                <div id="all_plants_page_c2" class="col-4 p-0">
+
+                </div>
+
+                <div id="all_plants_page_c3" class="col-4 p-0">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
