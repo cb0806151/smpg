@@ -1,5 +1,3 @@
-//const fs = require('fs');
-
 const log = console.log;
 
 var nativeColumns = [
@@ -13,7 +11,7 @@ var nativeColumnsLatin = [
     ['Oxalis_Stricta', 'Lamium_purpureum', 'Symphoricarpos_orbiculatus'],
     ['Podophyllum', 'Vernonia_gigantea', 'Ambrosia_artemisiifolia'],
     ['Phytolacca_americana', 'Thalictrum_thalictroides','Nothoscordum_bivalve'],
-    ['Claytonia_Virginica', 'Solanum_carolinense']
+    ['Claytonia_virginica', 'Solanum_carolinense']
 ]
 var nonNativeColumns = [
     ['Birdeye_Speedwell', 'Hairy_Buttercup', 'White_Clover'],
@@ -57,7 +55,6 @@ $(document).ready(function(){
                 let photo = columns[i][j];
                 let row = i;
                 let column = j
-                log(photo)
                 let plantName = photo.replace('_', ' ');
                 $(`#${page_name}_c${i+1}`).append(`
                 <img src="images/${photo}.jpg" id="${photo}_img" class="plant-image w-100 border">
@@ -72,13 +69,8 @@ $(document).ready(function(){
                 });
 
 
-                // Open plants modal with info on that plant
                 $(`#${photo}_img`).on("click", function(){
-                    log(photo);
-                    log(row);
-                    log(column)
                     let latinName = latinNames[row][column];
-                    log(latinName);
                     setPlantInfo(latinName);
                     $("#modal_info").html("")
                     $("#modal_photos").html("")
@@ -93,7 +85,6 @@ $(document).ready(function(){
     }
 
     function setPlantInfo(plantLatinName) {
-        log(plantLatinName)
         let fetchData = $.get("https://en.wikipedia.org/api/rest_v1/page/mobile-html/" + plantLatinName, function(response) {
             $("#modal_info").html(response);
         });
@@ -101,7 +92,6 @@ $(document).ready(function(){
         let fetchImageData = $.get("https://en.wikipedia.org/api/rest_v1/page/media/" + plantLatinName, function(response) {
             $("#modal_photos").html("")
             response.items.forEach(function(item) {
-                console.log(item.original.source);
                 if (item.original.source.indexOf(".tiff") === -1) {
                     $("#modal_photos").append(`<img src="${item.original.source}" class="w-100">`);
                 }
